@@ -1,104 +1,143 @@
-* {
-    box-sizing: border-box;
+:root {
+    --primario: #7a7a7a;
+    --secundario: #e5e5e5;
+    --tercero: #e1e1e1;
+    --negro: #000000;
+    --blanco: #FFFFFF;
 }
 
+html {
+    font-size: 62.5%; /* Sirve para que la fuente se "normalice"*/
+    box-sizing: border-box; /*Sirve para que no afecte el padding y todo tenga su tamaño correcto */
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after { 
+    box-sizing: inherit; /*Sirve para que no afecte el padding y todo tenga su tamaño correcto */
+  }
+
+/* Globales*/
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primario);
+    line-height: 1.5;
+    margin: 10px;
     padding: 0;
 }
 
-.form-container {
+.linea-divisoria {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+/*Encabezado*/
+
+.contenedor {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+.contenedor-encabezado-a {
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    font-size: 1.5rem;
     width: 80%;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.contenedor-encabezado p {
+    font-size: 2rem;
 }
 
-.profile-image {
-    position: relative;
-    width: 25%;
-    height: 25%;
-    margin-bottom: 20px;
+.iconperson {
+    border-radius: 50%;
+    max-width: 20%;
 }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-}
-
-.remove-photo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #ff0000a1;
-    color: #fff;
-    border: none;
-    border-radius: 20%;
-    cursor: pointer;
-}
-
-h2 {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-}
-
-.input-group {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.input-group label {
-    width: 100%;
+.registro {
+    background-color: var(--secundario);
+    width: 25rem;
+    border: 2px var(--secundario) solid;
+    font-size: 2rem;
+    color: #7f7f7f;
     font-weight: bold;
-    color: #555;
-}
-
-.input-group input[type="text"],
-.input-group input[type="email"] {
-    width: calc(33.33% - 15px);
+    margin: 1rem 2rem 1rem 2rem;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 5%;
 }
 
-.input-group input[type="checkbox"],
-.input-group input[type="radio"] {
-    margin-right: 5px;
+.registro:hover {
+    background-color: var(--secundario);
+}
+/*Cuerpo*/
+
+.foto-perfil {
+    border-radius: 5%;
+    max-width: 30%;
+    margin: 1rem 1rem;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+.contenedor-principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.contenedor-secundario {
+    display: flex;
+    align-items: flex-start;
+    
+    font-size: 2.2rem;
+}
+
+.area {
+    margin: 1rem 2rem;
+    width: 25rem;
+    height: 5rem;
+    background-color: var(--secundario);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 5%;
 }
 
-button.submit {
-    background-color: #28a745;
+.check {
+    margin-left: 1.5rem;
+    font-weight: normal;
 }
 
-button.register {
-    background-color: #007bff;
+.datos {
+    display: flex;
+    pad: 0rem 1rem;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
 }
 
-button:hover {
-    opacity: 0.8;
+.datos-input {
+    margin: 1rem 2rem;
+    width: 25rem;
+    height: 5rem;
+    background-color: var(--secundario);
+    border: none;
+    border-radius: 5%;
+}
+
+.separacion {
+    margin: 0rem 10rem;
 }

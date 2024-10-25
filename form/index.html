@@ -1,93 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+	<title>Registro de vacante</title>
 </head>
 <body>
-    <div class="form-container">
+    <div class="contenedor">
+        <div class="contenedor-encabezado">
+            <img class="iconperson" src="img/profile.jpg" alt="person icon">
+            <p>Ingresa los datos necesarios</p>
+        </div>
+        
+        <div class="contenedor-encabezado-a">
+            <button class="registro">Registro de la vacante</button>
+            <button class="registro">Guardar cambios</button>
+        </div>
+    </div>
+
+    <div class="contenedor-principal">
+        <img class="foto-perfil" src="img/profile.jpg" alt="Profile Photo">
+
         <form>
-            <div class="profile-image">
-                <img src="img/profile.jpg" alt="Foto de perfil">
-                <button type="button" class="remove-photo">X</button>
+            <div class="contenedor-secundario">
+                <p>Área de Servicio</p>
+                <input class="area" type="text">
+                <input class="area" type="text">
+            </div>
+
+            <div class="contenedor-secundario">
+                <p class="texto">Tipo de vehiculo</p>
+                <input type="checkbox" value="Camioneta">
+                <label class="check" for="Camioneta">Camioneta</label>
+
+                <input class="check" type="checkbox" value="Motocicleta">
+                <label class="check" for="Motocicleta">Motocicleta</label>
+
+                <input class="check" type="checkbox" value="Automovil">
+                <label class="check" for="Automovil">Automóvil</label>
+
+                <input class="check" type="checkbox" value="AutoPropio">
+                <label class="check" for="AutoPropio">Automóvil propio</label>
+            </div>
+
+            <hr class="linea-divisoria">
+
+            <h2>Datos principales</h2>
+            <div class="contenedor-secundario"> 
+                <label class="datos">Nombre <input class="area" type="text" name="nombre"></label>
+                <label class="datos">Apellido paterno<input class="area" type="text" name="aPaterno"></label>
+                <label class="datos">Apellido materno<input class="area" type="text" name="aMaterno"></label>
+            </div>
+
+            <div class="contenedor-secundario">
+                <label class="datos">Fecha de Nacimiento <input class="area" type="date" name="fechaNacimiento"></label>
+                <label class="datos">CURP <input class="area" type="text" name="curp"></label>
+                <p class="datos">Sexo</p>
+                <input class="check" type="checkbox" id="masculino" name="sexo" value="Masculino">
+                <label class="check" for="masculino">Masculino</label>
+                <input class="check" type="checkbox" id="femenino" name="sexo" value="Femenino">
+                <label class="check" for="femenino">Femenino</label>
+            </div>
+        </form>
+    </div>
+
+    <hr class="linea-divisoria">
+
+    <div class="contenedor-secundario">
+        <form>
+            <h2>Datos de contacto</h2>
+            <div class="contenedor-secundario">
+                <label>Número <input class="area" type="tel" name="numero"></label>
+                <label>Correo electrónico <input class="area" type="email" name="email"></label>
+            </div>
+        </form>
+    </div>
+
+    <hr class="linea-divisoria">
+
+    <div>
+        <div class="contenedor-secundario">
+                <h2>Dirección</h2>
+                <label class="datos" for="file-upload">Adjuntar documento</label>
+                <input type="file" name="archivo">
             </div>
             
-            <h2>Área de Servicio</h2>
-            <div class="input-group">
-                <label for="area-servicio"></label>
-                <input type="text" id="area-servicio">
-                <label for="smx"></label>
-                <input type="text" id="smx">
+            <div class="contenedor-secundario">
+                <label class="datos">Calle <input class="area" type="text" name="calle"></label>
+                <label class="datos">Número Exterior<input class="area" type="text" name="numero"></label>
+                <label class="datos">Número Interior<input class="area" type="text" name="numero"></label>
+                <label class="datos">Colonia <input class="area" type="text" name="colonia"></label>
             </div>
-
-            <h2>Tipo de vehículo</h2>
-            <div class="input-group">
-                <label for="camioneta">Camioneta</label>
-                <input type="checkbox" id="camioneta">
-                <label for="moto">Motocicleta</label>
-                <input type="checkbox" id="moto">
-                <label for="auto">Automóvil</label>
-                <input type="checkbox" id="auto">
-                <label for="auto-propio">Automóvil propio</label>
-                <input type="checkbox" id="auto-propio">
-            </div>
-
-            <h2>Datos Principales</h2>
-            <div class="input-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre">
-                <label for="apellido-paterno">Apellido paterno</label>
-                <input type="text" id="apellido-paterno">
-                <label for="apellido-materno">Apellido materno</label>
-                <input type="text" id="apellido-materno">
-            </div>
-
-            <div class="input-group">
-                <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                <input type="text" id="fecha-nacimiento">
-                <label for="curp">CURP</label>
-                <input type="text" id="curp">
-            </div>
-
-            <div class="input-group">
-                <label for="sexo">Sexo</label>
-                <input type="radio" id="sexo-m" name="sexo" value="M">
-                <label for="sexo-m">M</label>
-                <input type="radio" id="sexo-f" name="sexo" value="F">
-                <label for="sexo-f">F</label>
-            </div>
-
-            <h2>Datos de Contacto</h2>
-            <div class="input-group">
-                <label for="telefono">Número</label>
-                <input type="text" id="telefono">
-                <label for="correo">Correo</label>
-                <input type="email" id="correo">
-            </div>
-
-            <h2>Dirección</h2>
-            <div class="input-group">
-                <label for="calle">Calle</label>
-                <input type="text" id="calle">
-                <label for="num-int">Número Int.</label>
-                <input type="text" id="num-int">
-                <label for="num-ext">Número Ext.</label>
-                <input type="text" id="num-ext">
-                <label for="colonia">Colonia</label>
-                <input type="text" id="colonia">
-                <label for="delegacion">Delegación</label>
-                <input type="text" id="delegacion">
-                <label for="municipio">Municipio</label>
-                <input type="text" id="municipio">
-                <label for="cp">C.P.</label>
-                <input type="text" id="cp">
-            </div>
-
-            <div class="input-group">
-                <button type="button" class="submit">Guardar cambios</button>
-                <button type="button" class="register">Registro de la vacante</button>
+            
+            <div class="contenedor-secundario">
+                <label class="datos">Alcaldía o Delegación<input class="area" type="text" name="delegacion"></label>
+                <label class="datos">Municipio <input class="area" type="text" name="municipio"></label>
+                <label class="datos">Ciudad<input class="area" type="text" name="estado"></label>
+                <label class="datos">C.P<input class="area" type="text" name="cp"></label>
             </div>
         </form>
     </div>
